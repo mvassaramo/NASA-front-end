@@ -1,0 +1,15 @@
+.search-box {
+  width: 300px;
+  height: 30px;
+  border-radius: 4px;
+
+}
+
+.search-button {
+  background-color: gray;
+  border-radius: 8px;
+}
+
+.search-button:hover {
+    cursor: pointer
+}

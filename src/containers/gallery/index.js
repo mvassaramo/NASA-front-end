@@ -12,6 +12,11 @@ class Gallery extends React.Component {
     assets: []
   };
 
+  enterPressed = (event) => {
+    const code = event.keyCode || event.which 
+    return code === 13 ? this.getAssets() : null 
+  }
+
   updateSearchQuery = searchQuery => this.setState({ searchQuery });
 
   getAssets = () => {
@@ -27,6 +32,7 @@ class Gallery extends React.Component {
         <Search
           updateSearchQuery={this.updateSearchQuery}
           getAssets={this.getAssets}
+          enterPressed={this.enterPressed}
         />
         <div className="gallery-container">
           {this.state.assets.length > 0 ? (
