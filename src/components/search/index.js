@@ -1,9 +1,15 @@
 import React from "react";
 
-class Search extends React.Component {
-  render() {
-    return <h3>Search here....</h3>;
-  }
-}
+const Search = props => {
+  return (
+    <React.Fragment>
+      <h3>Search here....</h3>
+      <form>
+        <input type="text" placeholder={"search for..."} />
+        <button>Search</button>
+      </form>
+    </React.Fragment>
+  );
+};
 
 export default Search;
