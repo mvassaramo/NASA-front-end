@@ -6,13 +6,12 @@ import Home from "../containers/home";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
-        <Route exact path="/" render={Home} />
+        <Route exact path="/" render={props => <Home {...props} />} />
         <Footer />
       </div>
     );
