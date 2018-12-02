@@ -1,0 +1,14 @@
+.asset-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: auto;
+    
+}
+
+.asset-card:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.asset-card img {
+    width: 40%;
+    height: auto;
+}

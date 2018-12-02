@@ -3,7 +3,6 @@ import React from "react";
 import Search from "../../components/search";
 import Asset from "../../components/asset";
 
-
 const API = "https://images-api.nasa.gov";
 
 class Gallery extends React.Component {
@@ -17,7 +16,7 @@ class Gallery extends React.Component {
   getAssets = () => {
     return fetch(`${API}/search?q=${this.state.searchQuery}`)
       .then(res => res.json())
-      .then(data => this.setState({ assets: data['collection']['items'] }));
+      .then(data => this.setState({ assets: data["collection"]["items"] }));
   };
 
   render() {
@@ -28,9 +27,15 @@ class Gallery extends React.Component {
           updateSearchQuery={this.updateSearchQuery}
           getAssets={this.getAssets}
         />
-        {this.state.assets.map( asset =>
-            asset.data[0].media_type === "image" ? <Asset asset={asset} /> : null 
-            )}
+        {this.state.assets.length > 0 ? (
+          this.state.assets.map(asset =>
+            asset.data[0].media_type === "image" ? (
+              <Asset asset={asset} />
+            ) : null
+          )
+        ) : (
+          <p>no results found</p>
+        )}
       </React.Fragment>
     );
   }
