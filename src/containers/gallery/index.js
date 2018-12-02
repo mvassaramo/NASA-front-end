@@ -27,8 +27,7 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <h1>Gallery!!</h1>
+      <React.Fragment><br></br>
         <Search
           updateSearchQuery={this.updateSearchQuery}
           getAssets={this.getAssets}
