@@ -1,7 +1,11 @@
 .asset-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: auto;
-    
+    width: 25%;
+    height: 300px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 10px;
+    align-content: space-between;
 }
 
 .asset-card:hover {
@@ -9,6 +13,9 @@
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .asset-card img {
-    width: 40%;
-    height: auto;
+    width: 90%;
+    height: 70%
 }
+
+
+
