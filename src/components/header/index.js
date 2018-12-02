@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './header.css'
+import NASAlogo from '../../components/images/NASA_logo.svg'
 
 const Header = () => 
 <div className="header">
-    <h1>Header</h1>
+<Link to='/'><img src={NASAlogo} alt="Nasa logo" height="70px"/></Link>
+    
 </div>
 
 

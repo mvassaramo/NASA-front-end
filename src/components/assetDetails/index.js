@@ -1,5 +1,5 @@
 import React from 'react'
 
-const AssetDetails = (props) => <p>{props}</p>
+const AssetDetails = (props) => <p>assetDetails</p>
 
 export default AssetDetails
