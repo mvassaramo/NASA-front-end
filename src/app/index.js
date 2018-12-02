@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import { Route } from 'react-router-dom'
+import { Route } from "react-router-dom";
 
 import "./App.css";
-import Home from '../containers/home'
+import Home from "../containers/home";
+import Header from "../components/header"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path='/' render={Home}/>
+        <Header/>
+        <Route exact path="/" render={Home} />
       </div>
     );
   }
