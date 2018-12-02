@@ -3,11 +3,14 @@ import React from "react";
 const Search = props => {
   return (
     <React.Fragment>
-      <h3>Search here....</h3>
       <form>
-        <input type="text" placeholder={"search for..."} />
-        <button>Search</button>
+        <input
+          type="text"
+          placeholder={"search for..."}
+          onChange={event => props.updateSearchQuery(event.target.value)}
+        />
       </form>
+      <button onClick={props.getAssets}>Search</button>
     </React.Fragment>
   );
 };
