@@ -9,7 +9,7 @@ const Asset = props => {
     <React.Fragment>
       <Link to={`/gallery/${nasa_id}`}>
         <div className="asset-card">
-          <p>{props.asset.data[0].title}</p>
+          <p className="asset-title">{props.asset.data[0].title}</p>
           <img
             src={props.asset.links[0].href}
             alt={props.asset.data[0].title}
