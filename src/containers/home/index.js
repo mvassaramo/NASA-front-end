@@ -1,12 +1,14 @@
 import React from "react";
 
-import Search from "../../components/search";
+import "./home.css";
+
+import homepageBackground from "../../components/images/homepage_background.jpg";
 
 class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h2>homepage</h2>
+          <img src={homepageBackground} alt="galaxy background" className="homepage-background" />
       </React.Fragment>
     );
   }

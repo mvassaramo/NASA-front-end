@@ -15,7 +15,6 @@ class App extends Component {
         <Header />
         <Route exact path="/" render={props => <Home {...props} />} />
         <Route exact path="/gallery" render={props => <Gallery {...props} />} />
-
         <Footer />
       </div>
     );

@@ -1,0 +1,9 @@
+.homepage-background {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  height: 40rem;
+  object-fit: cover;
+}
