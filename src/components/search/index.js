@@ -1,6 +1,6 @@
 import React from "react";
 
-import './search.css'
+import "./search.css";
 
 const Search = props => {
   return (
@@ -12,7 +12,9 @@ const Search = props => {
           onChange={event => props.updateSearchQuery(event.target.value)}
           onKeyPress={props.enterPressed.bind(this)}
         />
-      <button className="search-button" onClick={props.getAssets}>Search</button>
+        <button onClick={props.getAssets}>
+          <i class="fa fa-search" />
+        </button>
     </React.Fragment>
   );
 };
