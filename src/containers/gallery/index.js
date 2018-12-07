@@ -3,6 +3,9 @@ import React from "react";
 import Asset from "../../components/asset";
 
 class Gallery extends React.Component {
+
+ 
+
   render() {
     return (
       <React.Fragment>

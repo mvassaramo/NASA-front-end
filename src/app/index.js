@@ -18,6 +18,8 @@ class App extends Component {
     search: false
   };
 
+  clearSearch = () => this.setState({ search: false });
+
   enterPressed = event => {
     const code = event.keyCode || event.which;
     if (code === 13) {
@@ -48,9 +50,7 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={props =>
-            search ? <Redirect to="/gallery" {...props} /> : <Home {...props} />
-          }
+          render={props => (search ? <Redirect to="/gallery" /> : <Home />)}
         />
         <Route
           exact
@@ -60,7 +60,14 @@ class App extends Component {
         <Route
           exact
           path="/gallery/:nasa_id"
-          render={props => <AssetDetails {...props} assets={assets} />}
+          render={props => (
+            <AssetDetails
+              {...props} assets={assets}
+              asset={assets.find(
+                a => a.data[0].nasa_id === props.match.params.nasa_id
+              )}
+            />
+          )}
         />
         <Footer />
       </div>
