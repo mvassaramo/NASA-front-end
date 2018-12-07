@@ -8,3 +8,7 @@
 .assetDetail-wrapper img {
     flex: auto
 }
+
+.assetDetail-wrapper p {
+    line-height: 2em;
+}

@@ -8,9 +8,10 @@ const AssetDetails = props => {
      const {title, description} = props.asset.data[0]
   return (props.asset ? 
     <div className="assetDetail-container">
+      
+      <img src={props.asset.links[0].href} alt={title} />
       <p>{title}</p>
       <p>{description}</p>
-      <img src={props.asset.links[0].href} alt={title} />
       <button onClick={props.history.goBack}>Take me back</button>
     </div>
    : null);
