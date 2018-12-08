@@ -1,14 +1,19 @@
 .assetDetail-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .assetDetail-wrapper img {
-    flex: auto
+  display: block;
+  width: auto;
+  height: auto;
+  span: 3
 }
 
 .assetDetail-wrapper p {
-    line-height: 2em;
+  line-height: 2em;
+  text-align: center;
+  padding: 20px;
 }
