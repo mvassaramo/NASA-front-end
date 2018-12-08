@@ -7,7 +7,6 @@ import Gallery from "../containers/gallery";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import AssetDetails from "../components/assetDetails";
-import Search from "../components/search";
 
 const API = "https://images-api.nasa.gov";
 
@@ -42,27 +41,41 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Search
-          updateSearchQuery={this.updateSearchQuery}
-          getAssets={this.getAssets}
-          enterPressed={this.enterPressed}
-        />
         <Route
           exact
           path="/"
-          render={props => (search ? <Redirect to="/gallery" /> : <Home />)}
+          render={props =>
+            search ? (
+              <Redirect to="/gallery" />
+            ) : (
+              <Home
+                updateSearchQuery={this.updateSearchQuery}
+                getAssets={this.getAssets}
+                enterPressed={this.enterPressed}
+              />
+            )
+          }
         />
         <Route
           exact
           path="/gallery"
-          render={props => <Gallery {...props} assets={assets} />}
+          render={props => (
+            <Gallery
+              {...props}
+              assets={assets}
+              updateSearchQuery={this.updateSearchQuery}
+              getAssets={this.getAssets}
+              enterPressed={this.enterPressed}
+            />
+          )}
         />
         <Route
           exact
           path="/gallery/:nasa_id"
           render={props => (
             <AssetDetails
-              {...props} assets={assets}
+              {...props}
+              assets={assets}
               asset={assets.find(
                 a => a.data[0].nasa_id === props.match.params.nasa_id
               )}
