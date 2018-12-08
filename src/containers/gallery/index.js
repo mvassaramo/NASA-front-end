@@ -12,14 +12,10 @@ class Gallery extends React.Component {
           getAssets={this.props.getAssets}
           enterPressed={this.props.enterPressed}
         />
-        
+
         <div className="gallery-container">
           {this.props.assets.length > 0 ? (
-            this.props.assets.map(asset =>
-              asset.data[0].media_type === "image" ? (
-                <Asset asset={asset} />
-              ) : null
-            )
+            this.props.assets.map(asset => <Asset asset={asset} />)
           ) : (
             <p>no results found</p>
           )}
