@@ -8,12 +8,12 @@
 .assetDetail-wrapper img {
   display: block;
   width: auto;
-  height: auto;
-  span: 3
+  height: 400px;
+  padding: 20px;
 }
 
 .assetDetail-wrapper p {
   line-height: 2em;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
