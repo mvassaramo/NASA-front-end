@@ -2,7 +2,7 @@ import React from 'react'
 
 import './footer.css'
 
-const Footer= () => <div className="footer">Footer placeholder</div>
+const Footer= () => <div className="footer"></div>
 
 
 export default Footer

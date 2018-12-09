@@ -9,7 +9,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-         <Search
+        <Search
           updateSearchQuery={this.props.updateSearchQuery}
           getAssets={this.props.getAssets}
           enterPressed={this.props.enterPressed}
@@ -19,7 +19,6 @@ class Home extends React.Component {
           alt="galaxy background"
           className="homepage-background"
         />
-       
       </React.Fragment>
     );
   }

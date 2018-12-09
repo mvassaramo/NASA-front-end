@@ -2,5 +2,10 @@
     background: rgb(7,13, 44);
     padding-top: 20px;
     padding-bottom: 20px;
-    margin: 20px 0 0 0;
+    margin: auto;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
 }
