@@ -14,7 +14,9 @@ class App extends Component {
   state = {
     searchQuery: undefined,
     assets: [],
-    search: false
+    search: false,
+    showImages: false,
+    showVideos: false
   };
 
   clearSearch = () => this.setState({ search: false });

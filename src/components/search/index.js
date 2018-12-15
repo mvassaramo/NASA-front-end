@@ -15,6 +15,11 @@ const Search = props => {
         <button onClick={props.getAssets}>
           <i class="fa fa-search" />
         </button>
+        <div>
+          <input type="checkbox" id="images" name="images"/><label for="images">Images</label>
+          <input type="checkbox" id="videos" name="videos"/><label for="videos">Videos</label>
+
+        </div>
     </React.Fragment>
   );
 };

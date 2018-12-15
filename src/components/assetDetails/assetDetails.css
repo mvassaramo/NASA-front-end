@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .assetDetail-wrapper img {
@@ -13,7 +14,16 @@
 }
 
 .assetDetail-wrapper p {
-  line-height: 2em;
+  line-height: 1.5em;
   text-align: center;
   padding: 10px;
+}
+
+.assetDetail-wrapper button {
+  padding: 10px;
+  margin: 5px;
+}
+.assetDetail-wrapper button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }

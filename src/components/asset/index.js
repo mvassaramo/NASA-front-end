@@ -27,7 +27,7 @@ class Asset extends React.Component {
             <h5>{title}</h5>
             {media_type === "video" ? (
               <video width="200" height="150" controls>
-                <source src={this.state.videoLink} type="video/mp4" />
+                <source src={encodeURI(this.state.videoLink)} type="video/mp4" />
               </video>
             ) : (
               <img src={this.props.asset.links[0].href} alt={title} />
